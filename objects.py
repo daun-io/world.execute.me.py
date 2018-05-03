@@ -44,6 +44,9 @@ class IllegalArgumentException(Exception):
 class Trapped(Exception):
     pass
 
+def create(object):
+    return Lovable
+
 
 class Lovable(object):
     class Attribute(object):

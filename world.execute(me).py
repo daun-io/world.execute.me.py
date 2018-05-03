@@ -14,6 +14,11 @@ def main():
     # Lay down your pieces
     # And let's begin
     # OBJECT CREATION
+    Lovable = create(object)
+
+    # Fill in my data
+    # parameters
+    # INITIALIZATION
     me = Lovable("Me", 0, True, -1, False)
     you = Lovable("You", 0, True, -1, False)
 
@@ -96,19 +101,19 @@ def main():
     if isinstance(me, Eggplant):
         # Then I will give you my
         # NUTRIENTS
-        you.add_attribute(me.get_dimensions().to_attribute())
+        you.add_attribute(me.get_nutrients().to_attribute())
 
     # If I'm a tomato
     if isinstance(me, Tomato):
         # Then I'll give you
         # ANTIOXIDANTS
-        you.add_attribute(me.get_circumference().to_attribute())
+        you.add_attribute(me.get_antioxidants().to_attribute())
 
     # If I'm a tabby cat
     if isinstance(me, TabbyCat):
         # Then I will purr for your
         # ENJOYMENT
-        you.add_action("sit", me.get_tangent(you.get_x_position()))
+        me.purr()
 
     # If I'm the only god
     if world.get_god().equals(me):
